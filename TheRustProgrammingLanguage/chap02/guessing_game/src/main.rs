@@ -1,8 +1,13 @@
 
 use std::io;    // 为了获得用户的输入并将其打印出来，我们需要把标准库（也就是所谓的std）中的io模块引入当前的作用域中
+use rand::Rng;
 
 fn main() {
     println!("Guess the number!");
+
+    let secret_number = rand::thread_rng().gen_range(1, 101);
+    println!("The secret number is: {}", secret_number);
+
     println!("Please input your guess.");
 
     // 以let开头的语句创建了一个新的变量 （variable）
