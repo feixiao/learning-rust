@@ -24,6 +24,19 @@
   # 切换stable版本
   rustup update stable
   ```
+  
++ Windows
+  ```shell
+  #用于更新 toolchain
+  
+  set RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+  
+  #用于更新 rustup
+  
+  set RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
+  
+  # 运行rust-init.exe
+  ```
 
 #### 更新和卸载
 
@@ -62,7 +75,7 @@ rustup doc
 
 #### IDE
 
-- Clion + Rust
+- Clion + Rust插件
 
 ### 内容概述
 
