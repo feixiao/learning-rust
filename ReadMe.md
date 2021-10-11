@@ -34,6 +34,26 @@ rustup update
 rustup self uninstall
 ```
 
+#### cargo
+
+- 创建项目
+
+```shell
+cargo new hello_cargo
+```
+
+- 编译和运行
+
+```shell
+cd hello_cargo
+
+# 编译
+cargo build
+
+# 运行
+cargo run
+```
+
 #### 本地文档
 
 ```shell
