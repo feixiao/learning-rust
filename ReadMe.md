@@ -60,6 +60,10 @@ cargo run
 rustup doc
 ```
 
+#### IDE
+
+- Clion + Rust
+
 ### 内容概述
 
 - [《Rust 权威指南》代码](./TheRustProgrammingLanguage)
