@@ -1,3 +1,11 @@
+
+enum SpreadsheetCell {
+   Int(i32),
+   Float(f64),
+   Text(String),
+}
+
+
 fn main() {
    // 创建一个用来存储i32数据的空动态数组
    let v:Vec<i32> = Vec::new();
@@ -34,4 +42,12 @@ fn main() {
    for i in &v {
       println!("{}", i);
    }
+
+
+   // 在动态数组中使用定义的枚举来存储不同类型的值
+   let row = vec![
+      SpreadsheetCell::Int(3),
+      SpreadsheetCell::Text(String::from("blue")),
+      SpreadsheetCell::Float(10.12),
+   ];
 }
