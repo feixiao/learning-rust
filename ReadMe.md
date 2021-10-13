@@ -80,3 +80,4 @@ rustup doc
 ### 内容概述
 
 - [《Rust 权威指南》代码](./TheRustProgrammingLanguage)
+- [rust-by-example](https://doc.bccnsoft.com/docs/rust-1.36.0-docs-html/rust-by-example/index.html)
