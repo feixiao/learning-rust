@@ -1,7 +1,9 @@
-
+use std::cmp::min;
 use std::env;
 use std::fs;
+use std::process;
 
+// use minigrep::Config;
 
 // fn parse_config(args: &[String] ) -> (&str, &str) {
 //     let query = &args[1];
@@ -9,21 +11,41 @@ use std::fs;
 //     (query, filename)
 // }
 
+
+struct Config {
+    query: String,
+    filename: String,
+}
+
+impl Config {
+    fn new(args: &[String]) -> Result<Config, &'static str> {
+        if args.len() < 3 {
+            return Err("not enough arguments");
+        }
+        let query = args[1].clone();
+        let filename = args[2].clone();
+        Ok(Config { query, filename })
+    }
+}
+
+
+
+
 fn main() {
     // 将命令行参数收集到一个动态数组中并打印出来
     let args : Vec<String> = env::args().collect();
     println!("{:?}", args);
 
-    // 创建变量来存储查询参数和文件名参数
-    let query = &args[1];
-    let  filename = &args[2];
 
-    println!("Searching for {}", query);
-    println!("In file {}", filename);
+    let args: Vec<String> = env::args().collect();
+
+    let config = Config::new(&args).unwrap_or_else(| err| {
+        println!("Problem parsing arguments: {}", err);
+        process::exit(1);
+    });
 
 
-    let contents = fs::read_to_string(filename)
-        .expect("Something went wrong reading the file");
-
-    println!("With text:\n {}", contents);
+    // if let Err(e) = minigrep::run(config) {
+    //
+    // }
 }
