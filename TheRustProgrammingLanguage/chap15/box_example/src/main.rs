@@ -1,5 +1,7 @@
 
 use std::ops::Deref;
+use std::rc::Rc;
+
 use crate::List::{Cons, Nil};
 
 enum List {
@@ -69,4 +71,10 @@ fn main() {
     hello(&m);
     // 如果Rust没有解引用转换功能，就必须编写这样的代码
     // hello(&(*m)[..]);
+
+    let a = Rc::new(Cons(5, Rc::new(Cons(10, Rc::new(Nil)))));
+    // 每次调用Rc::clone都会使引用计数增加，而Rc<List>智能指针中的数据只有在引用计数器减少到0时才会被真正清理掉
+    let b = Cons(3, Rc::clone(&a));
+    let c = Cons(4, Rc::clone(&a));
+
 }
