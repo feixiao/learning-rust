@@ -81,3 +81,6 @@ rustup doc
 
 - [《Rust 权威指南》代码](./TheRustProgrammingLanguage)
 - [rust-by-example](https://doc.bccnsoft.com/docs/rust-1.36.0-docs-html/rust-by-example/index.html)
+
+### Rust in Android
++ [《Rust/C++ interop in the Android Platform》](https://security.googleblog.com/2021/06/rustc-interop-in-android-platform.html)
