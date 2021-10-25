@@ -81,6 +81,11 @@ rustup doc
 
 - [《Rust 权威指南》代码](./TheRustProgrammingLanguage)
 - [rust-by-example](https://doc.bccnsoft.com/docs/rust-1.36.0-docs-html/rust-by-example/index.html)
+- [bindgen](https://rust-lang.github.io/rust-bindgen/)    Rust调用C/C++.
+
+
+#### Rust写操作系统
++ [《rCore-Tutorial-Book-v3》](https://rcore-os.github.io/rCore-Tutorial-Book-v3)
 
 ### Rust in Android
 + [《Rust/C++ interop in the Android Platform》](https://security.googleblog.com/2021/06/rustc-interop-in-android-platform.html)
