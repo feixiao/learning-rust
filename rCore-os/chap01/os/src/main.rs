@@ -1,5 +1,8 @@
 #![no_std]
-#![no_main]
+// 我们在 main.rs 的开头加入设置 #![no_main] 告诉编译器我们没有一般意义上的 main 函数，并将原来的 main 函数删除。
+// 在失去了 main 函数的情况下，编译器也就不需要完成所谓的初始化工作了。
+// 初始化工作 : 语言标准库和三方库作为应用程序的执行环境，需要负责在执行应用程序之前进行一些初始化工作，然后才跳转到应用程序的入口点（也就是跳转到我们编写的 main 函数）开始执行。
+#![no_main]  
 #![feature(global_asm)]
 #![feature(asm)]
 #![feature(panic_info_message)]
