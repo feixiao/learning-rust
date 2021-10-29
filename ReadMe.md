@@ -89,3 +89,4 @@ rustup doc
 
 ### Rust in Android
 + [《Rust/C++ interop in the Android Platform》](https://security.googleblog.com/2021/06/rustc-interop-in-android-platform.html)
++ [《cross-platform-rust》](https://github.com/feixiao/cross-platform-rust)
