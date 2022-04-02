@@ -1,4 +1,4 @@
-# Code Examples for _Programming Rust_
+## Code Examples for _Programming Rust_
 
 This repository contains complete code for the larger example programs
 from the book “Programming Rust”, by Jim Blandy and Jason Orendorff.
@@ -10,7 +10,7 @@ For those projects that define programs, `cargo run` should run them.
 The example code in this directory and its subdirectories is licensed under the
 terms of the MIT license. See [LICENSE-MIT](LICENSE-MIT) for details.
 
-## Chapter 2: A Tour of Rust
+### Chapter 2: A Tour of Rust
 
 - The `gcd` directory holds the command-line program for computing the greatest
   common denominator of a list of numbers.

@@ -7,6 +7,7 @@ struct User {
     sign_in_count: u64,
     active: bool,
 }
+
 // build_user函数中使用了相同的参数名与字段名，并采用了字段初始化简写语法进行编写
 fn build_user(email: String, username: String) -> User {
     User {
