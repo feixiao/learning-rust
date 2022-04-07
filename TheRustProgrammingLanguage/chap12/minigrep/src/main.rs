@@ -44,6 +44,8 @@ fn main() {
     //     process::exit(1);
     // });
 
+    // 使用unwrap_or_else可以让我们执行一些自定义的且不会产生panic! 的错误处理策略。
+    // 当值为Err时，这个方法则会调用闭包 （closure）中编写的代码，也就是我们定义出来并通过参数传入unwrap_or_else的这个匿名函数❸
     let config = minigrep::Config::new(&args).unwrap_or_else(| err| {
         println!("Problem parsing arguments: {}", err);
         process::exit(1);

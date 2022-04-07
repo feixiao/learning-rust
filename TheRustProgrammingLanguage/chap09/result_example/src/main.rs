@@ -10,14 +10,14 @@ fn read_username_from_file(file : &String) -> Result<String, io::Error> {
     let f = File::open(file);
 
     let mut f = match f {
-        Ok(file) => file,   // File::open运行成功，我们就将生成的文件句柄存储到变量f中并继续执行下一步
+        Ok(file) => file,           // File::open运行成功，我们就将生成的文件句柄存储到变量f中并继续执行下一步
         Err(e) => return Err(e),    // 在Err情况下提前将File::open产生的错误作为结果返回
     };
 
     let mut s = String::new();
 
     match f.read_to_string(&mut s) {
-        Ok(_) => Ok(s), // 当这个函数顺利运行时，调用这个函数的代码将会获得一个包裹在Ok中的String值，也就是这个函数从文件中读取的用户名。
+        Ok(_) => Ok(s),     // 当这个函数顺利运行时，调用这个函数的代码将会获得一个包裹在Ok中的String值，也就是这个函数从文件中读取的用户名。
         Err(e) => Err(e),   // 失败将这个错误值作为结果返回
     }
 }

@@ -9,6 +9,7 @@ pub struct Config {
 
 
 impl Config {
+    // 我们在第10章的“静态生命周期”一节中曾经指出&'static str是字符串字面量的类型，这也正是我们目前使用的错误提示信息类型
     pub fn new(args: &[String]) -> Result<Config, &'static str>  {
 
         // 改进错误提示信息
